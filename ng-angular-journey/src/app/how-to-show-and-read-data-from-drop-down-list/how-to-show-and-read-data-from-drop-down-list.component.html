@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <div class="row col-md-6">
+    <select class="form-select" [(ngModel)]="selectedSkillId">
+      <option value="" disabled>Select Primary Skills...</option>
+      <option *ngFor="let primarySkill of primarySkills" [value]="primarySkill.id">{{primarySkill.name}}</option>
+    </select>
+  </div>
+  <div class="row">
+    <p *ngIf="selectedSkillId">Selected primary skill id :: {{selectedSkillId}}</p>
+  </div>
+</div>
+
+
